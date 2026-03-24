@@ -10,13 +10,13 @@ public class CargoContainer <T> where T:DeliveryItem
         Console.WriteLine($"Added: {item.TrackingNumber}");
     }
 
-    public double GetTotalCost()
+    public void GetTotalCost()
     {
         double sum = 0;
         foreach (var item in _items)
         {
             sum += item.CalculateCost();
         }
-        return sum;
+        Console.WriteLine($"Total: {sum}");
     }
 }
