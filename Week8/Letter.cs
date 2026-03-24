@@ -5,9 +5,9 @@ public class Letter: DeliveryItem
     public Letter(string trackingNumber, double weight) : base(trackingNumber, weight)
     {
     }
-    public override void CalculateCost()
+    public override double CalculateCost()
     {
         int fixedPrice = 15;
-        Console.WriteLine($"Cost: {fixedPrice + Weight * 10}");
+        return fixedPrice + Weight * 10;
     }
 }

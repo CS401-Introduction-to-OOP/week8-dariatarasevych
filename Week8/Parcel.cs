@@ -10,9 +10,9 @@ public class Parcel : DeliveryItem
     }
    
 
-    public override void CalculateCost()
+    public override double CalculateCost()
     {
-        Console.WriteLine($"Cost: {50 + (Weight * 25)}");
+        return 50 + (Weight * 25);
     }
 
     public override void PrintInfo()

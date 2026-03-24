@@ -12,11 +12,11 @@ public class CargoContainer <T> where T:DeliveryItem
 
     public double GetTotalCost()
     {
+        double sum = 0;
         foreach (var item in _items)
         {
-            item.CalculateCost();
+            sum += item.CalculateCost();
         }
-
-        return GetTotalCost();
+        return sum;
     }
 }
